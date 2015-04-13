@@ -14,7 +14,7 @@ TRY {
     THROW(INVALID_OPERATION, "Some random error has occurred.");
     printf("Should not happen...");
 } CATCH(INVALID_OPERATION) {
-    printf(EXCEPTION.what);
+    printf("%s", EXCEPTION.what);
 } FINALLY {
     printf("Cleanup... cleanup...");
 } END_TRY
